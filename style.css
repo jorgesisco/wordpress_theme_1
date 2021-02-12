@@ -1,7 +1,109 @@
 /* 
-Theme name: Chocolate molds design 2021
+Theme name: Chocolate Molds design 2021
 Version: 1.0
-Description: modern redeign of modlcholcate.com 
-Tags: modern, responsive, fancy
+Description: Modern design of modlcholcate.com 
+Tags: Modern, responsive, fancy
 Author: Jorge Sisco
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 17px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  color: black;
+  font-weight: 700;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  margin: 25px 0px 0px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  /* background-color: yellowgreen; */
+  height: 164px;
+}
+
+.burger_icon_1,
+.burger_icon_2,
+.burger_icon_3 {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0px;
+  border-radius: 20px;
+}
+
+
+
+.burger-container {
+  margin: 80px 0;
+
+}
+
+.nav-item {
+  display: flex;
+  margin: 0px 30px 0px 0px;
+}
+
+.content {
+  margin: 95px 80px 0px;
+  /* background-color: yellow; */
+  /* padding: 20px 0px; */
+}
+
+.content h2 {
+  font-size: 70px;
+}
+
+.content p {
+  margin: 60px 0;
+}
+
+@media (min-width: 790px) {
+  .burger-container {
+    display: none;
+  }
+}
+
+@media (max-width: 834px) {
+  .nav-item {
+    margin: 0 25px 0 0;
+  }
+  
+  .content h2{
+    font-size: 50px;
+  }
+
+  .content p {
+    font-size: 15px ;
+  }
+
+
+@media (max-width: 790px) {
+  .navbar {
+    display: none;
+  }
+}
+
+
+
