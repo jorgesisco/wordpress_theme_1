@@ -12,16 +12,21 @@
 </head>
 <body>
     <header class="header">
-    <!-- <a class="site-title" href="index.html">SiteName.dev</a> -->
-	    
     
-    <nav class="header" >
-			<!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 			</button> -->
-				
+            <?php
+            if (function_exists('the_custom_logo')){
                 
-            
+                $custom_logo_id = get_theme_mod('custom_logo');
+                $logo = wp_get_attachment_image_src($custom_logo_id);
+
+
+            }
+            ?>
+            <img class='logo' src="<?php echo $logo[0]   ?>">
+            <div class="navbar-container">
                  <?php 
                 wp_nav_menu(
                     array(
@@ -32,16 +37,12 @@
                         
                     )
                 );
-                
-                
                 ?> 
                 <div class="burger-container">
                 <div class="burger_icon_1"></div>
                 <div class="burger_icon_2"></div>
                 <div class="burger_icon_3"></div>
-                </div>
-                
-               
+            </div>
                <!-- <ul class='navbar'>
                <img class="logo" s rc="/assets/images/logo.png"/>
                 <li class="nav-item">
@@ -63,17 +64,13 @@
                     <a class="nav-link btn btn-primary" href="contact.html"><i class="fas fa-envelope fa-fw mr-2"></i>Contact Us!</a>
                 </li>
                 </ul> -->
-            
-				
-				
-
-		</nav>
-    
+                </div>
     </header>
 
     <div class="main-wrapper">
         <!-- <img src='/assets/images/shape.svg'> -->
         <header class='hero-title'>
             <!-- <h1><?php the_title(); ?></h1> -->
+            <a class="site-title" href="index.html">SiteName.dev</a>
         </header>
     </div>
